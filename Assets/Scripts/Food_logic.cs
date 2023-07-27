@@ -10,8 +10,10 @@ public class Food_logic : MonoBehaviour
     public string tag_name;
     public GameObject _prefab;
     public GameObject N_obj;
+    public AudioSource audioSource;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Score = 0;
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -21,6 +23,7 @@ public class Food_logic : MonoBehaviour
             Score += 1;
             Destroy(collision.gameObject);
             N_obj = Instantiate(_prefab) as GameObject;
+            audioSource.Play();
              
         }
         
