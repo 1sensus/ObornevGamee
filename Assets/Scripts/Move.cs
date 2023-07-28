@@ -25,10 +25,6 @@ public class Move : MonoBehaviour
         transform.position += new Vector3(0, speed, 0) * Input.GetAxis("Vertical");
         
         Msr.flipX = movemH < 0 ? true : false;
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           
-        }
+        
     }    
 }

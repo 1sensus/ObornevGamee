@@ -10,6 +10,7 @@ public class Food_logic : MonoBehaviour
     public string tag_name;
     public GameObject _prefab;
     public GameObject N_obj;
+    public List<AudioClip> AudioClips;
     public AudioSource audioSource;
     void Start()
     {
@@ -23,6 +24,8 @@ public class Food_logic : MonoBehaviour
             Score += 1;
             Destroy(collision.gameObject);
             N_obj = Instantiate(_prefab) as GameObject;
+            int x = Random.Range(0, AudioClips.Count);
+            audioSource.clip=AudioClips[x];
             audioSource.Play();
              
         }
@@ -56,13 +59,7 @@ public class Food_logic : MonoBehaviour
     void FixedUpdate()
     {
         T_score.text = Score.ToString();
-        //if (Input.GetKeyDown(KeyCode.F))
-        //{
-        //    PlayAnim();
-        //}        
+                     
     }
-    //public void PlayAnim()
-    //{
-    //    anim.SetTrigger("Play");
-    //}
+    
 }
