@@ -24,6 +24,7 @@ public class Switcher : MonoBehaviour
         {
             Chars[i].color = CColor;
             players[i].GetComponent<AudioSource>().enabled = false;
+            players[i].GetComponent<Pointer>().enabled = false;
         }
         E_text.color = CColor;
         Q_text.color = CColor;
@@ -31,6 +32,7 @@ public class Switcher : MonoBehaviour
         players[cur_player].GetComponent< AFKmove > ().enabled = false;
         players[cur_player].GetComponent< Move> ().enabled = true;
         players[cur_player].GetComponent<AudioSource>().enabled = true;
+        players[cur_player].GetComponent<Pointer>().enabled = true;
 
     }
 
@@ -66,17 +68,20 @@ public class Switcher : MonoBehaviour
             script_1.enabled = false;
             var script_2 = players[i].GetComponent<UnityEngine.AI.NavMeshAgent>();
             script_2.enabled = true;
-            virtualCameras[i].gameObject.SetActive(false);
+            virtualCameras[i].gameObject.SetActive(false);  
             var script_3 = players[i].GetComponent<AudioSource>();
             script_3.enabled = false;
+            var script_4 = players[i].GetComponent<Pointer>();
+            script_4.enabled = false;
             Chars[i].color = CColor;
             
         }
         Chars[cur_player].color = NCColor;
         players[cur_player].GetComponent<AFKmove>().enabled=false;
         players[cur_player].GetComponent<Move>().enabled = true;
-        players[cur_player].GetComponent< UnityEngine.AI.NavMeshAgent>().enabled = false;
+        players[cur_player].GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
         players[cur_player].GetComponent<AudioSource>().enabled = true;
+        players[cur_player].GetComponent<Pointer>().enabled = true;
         virtualCameras[cur_player].gameObject.SetActive(true);
     }
 

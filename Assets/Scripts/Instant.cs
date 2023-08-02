@@ -8,7 +8,7 @@ public class Instant : MonoBehaviour
     public float TStart=10f;
     void Start()
     {
-        transform.position = new Vector3(Random.Range(-12, 30), Random.Range(-18, 18), 0.0f );
+        transform.position = new Vector3(Random.Range(-40, 40), Random.Range(-28, 28), 0.0f);
     }
 
     void Update()
@@ -21,7 +21,7 @@ public class Instant : MonoBehaviour
         if (TStart < 0)
         {
             TStart = 10f;
-            transform.position = new Vector3(Random.Range(-12, 30), Random.Range(-18, 18), 0.0f);
+            transform.position = new Vector3(Random.Range(-40, 40), Random.Range(-28, 28), 0.0f);
         }
 
     }

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool Game_is_paused = false;
+    public static bool Game_is_paused = true;
     public GameObject PauseMenuUI;
 
     public void Start()
