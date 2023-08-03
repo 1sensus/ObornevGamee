@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool Game_is_paused = true;
     public GameObject PauseMenuUI;
+    public AudioSource audioSource;
 
     public void Start()
     {
@@ -22,9 +23,11 @@ public class PauseMenu : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                audioSource.Play();
                 if (Game_is_paused)
                 {
-                    Resume();
+                    
+                    Resume();                    
                 }
                 else
                 {
@@ -36,12 +39,15 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
+        audioSource.Play();
         Time.timeScale = 1f;
         PauseMenuUI.SetActive(false);
         Game_is_paused = false;
+
     }
     void Pause()
     {
+        audioSource.Play();
         Time.timeScale = 0f;
         PauseMenuUI.SetActive(true);
         Game_is_paused = true;

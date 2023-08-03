@@ -10,11 +10,9 @@ public class Move : MonoBehaviour
     public SpriteRenderer Msr;
     public float movemH;
     public float movemV;
-    public Animator anim;
     void Start()
     {
         Msr = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()

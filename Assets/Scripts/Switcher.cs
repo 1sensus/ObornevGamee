@@ -12,7 +12,7 @@ public class Switcher : MonoBehaviour
     public Text Q_text;
     public Text E_text;
     public List<GameObject> players;
-    public List<Image> Chars;    
+    public List<Image> Chars;
     [SerializeField] private CinemachineVirtualCamera[] virtualCameras;
     public int cur_player=0;
     
@@ -24,7 +24,6 @@ public class Switcher : MonoBehaviour
         {
             Chars[i].color = CColor;
             players[i].GetComponent<AudioSource>().enabled = false;
-            players[i].GetComponent<Pointer>().enabled = false;
         }
         E_text.color = CColor;
         Q_text.color = CColor;
@@ -32,7 +31,6 @@ public class Switcher : MonoBehaviour
         players[cur_player].GetComponent< AFKmove > ().enabled = false;
         players[cur_player].GetComponent< Move> ().enabled = true;
         players[cur_player].GetComponent<AudioSource>().enabled = true;
-        players[cur_player].GetComponent<Pointer>().enabled = true;
 
     }
 
@@ -61,7 +59,8 @@ public class Switcher : MonoBehaviour
     }
     void Switch(int cur_player) 
     {
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 6; i++) 
+        {
             var script_ = players[i].GetComponent<AFKmove>();
             script_.enabled = true;
             var script_1 = players[i].GetComponent<Move>();
@@ -71,8 +70,6 @@ public class Switcher : MonoBehaviour
             virtualCameras[i].gameObject.SetActive(false);  
             var script_3 = players[i].GetComponent<AudioSource>();
             script_3.enabled = false;
-            var script_4 = players[i].GetComponent<Pointer>();
-            script_4.enabled = false;
             Chars[i].color = CColor;
             
         }
@@ -81,7 +78,6 @@ public class Switcher : MonoBehaviour
         players[cur_player].GetComponent<Move>().enabled = true;
         players[cur_player].GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
         players[cur_player].GetComponent<AudioSource>().enabled = true;
-        players[cur_player].GetComponent<Pointer>().enabled = true;
         virtualCameras[cur_player].gameObject.SetActive(true);
     }
 

@@ -126,10 +126,10 @@ TextureImporter:
       name: "\u0423\u043A\u0430\u0437\u0430\u0442\u0435\u043B\u044C_0"
       rect:
         serializedVersion: 2
-        x: 20
-        y: 13
-        width: 65
-        height: 77
+        x: 2
+        y: 1
+        width: 101
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
