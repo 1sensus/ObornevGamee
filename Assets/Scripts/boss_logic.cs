@@ -39,11 +39,8 @@ public class boss_logic : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        if (true)
-        {
-            TStart -= Time.deltaTime;
-        }
+        
+        TStart -= Time.deltaTime;
         if (TStart < 0)
         {
             TStart = 15f;

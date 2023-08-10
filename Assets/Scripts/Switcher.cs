@@ -25,8 +25,8 @@ public class Switcher : MonoBehaviour
             Chars[i].color = CColor;
             players[i].GetComponent<AudioSource>().enabled = false;
         }
-        E_text.color = CColor;
-        Q_text.color = CColor;
+        E_text.color = NCColor;
+        Q_text.color = NCColor;
         Chars[0].color = NCColor;
         players[cur_player].GetComponent< AFKmove > ().enabled = false;
         players[cur_player].GetComponent< Move> ().enabled = true;
@@ -82,3 +82,4 @@ public class Switcher : MonoBehaviour
     }
 
 }
+

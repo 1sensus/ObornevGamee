@@ -6,19 +6,17 @@ using Unity.AI.Navigation;
 
 public class Food_logic : MonoBehaviour
 {
-    public int Score;
+    public int Score = 0;
     public Text T_score;
     public string tag_name;
     public GameObject Food;
     public List<AudioClip> AudioClips;
     public AudioSource audioSource;
-    public float TStart = 10f;
+    public float TStart = 0f;
 
     void Start()
-    {
-        Food.transform.position = new Vector3(Random.Range(-40, 40), Random.Range(-28, 28), 0.0f);
+    {        
         audioSource = GetComponent<AudioSource>();
-        Score = 0;
     }
 
     

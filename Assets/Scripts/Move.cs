@@ -24,5 +24,6 @@ public class Move : MonoBehaviour
         
         Msr.flipX = movemH < 0 ? true : false;
         
-    }    
+    }
 }
+

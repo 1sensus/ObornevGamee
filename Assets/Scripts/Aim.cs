@@ -8,10 +8,6 @@ public class Aim : MonoBehaviour
     public Transform TargetTransfom;
     public Camera CharCamera;
     public Transform PointerImage;
-    public Vector2 PointerPosition;
-    void Start()
-    {
-    }
 
     void FixedUpdate()
     {
